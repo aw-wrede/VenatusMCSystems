@@ -1,9 +1,7 @@
 package de.venatus247.vutils;
 
 import de.venatus247.vutils.commands.TimerCommand;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.management.InstanceAlreadyExistsException;
@@ -18,7 +16,7 @@ public class Main extends JavaPlugin {
             vUtils = new VUtils(this);
         } catch (InstanceAlreadyExistsException e) {
             e.printStackTrace();
-            Bukkit.getPluginManager().disablePlugin(this);
+            //Bukkit.getPluginManager().disablePlugin(this);
             return;
         } catch (Exception e) {
             e.printStackTrace();
